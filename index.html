@@ -37,13 +37,13 @@
                 <!-- if needed -->
                 <span class="title-bg">for Beginners</span>
             </h1>
-            <h2><span>with</span> Christina Truong</h2>
+            <h2><span>with</span> Jessica Duarte</h2>
 
-            <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
+            <img class="instructor-img" src="https://en.gravatar.com/userimage/60723940/9dff28683e0ec3a4daddd81e54c4837a.jpg?size=200" alt="Jessica Duarte">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
-                <li><i class="fa fa-desktop"></i><a href="http://christinatruong.com">christinatruong.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong">@christinatruong</a></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hi@jessplease.com">hi@jessplease.com</li>
+                <li><i class="fa fa-desktop"></i><a href="http://jessplease.com">jessplease.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/jessicaduarte">@jessicaduarte</a></li>
             </ul>
         </div>
         <div class="presenter-notes">
@@ -197,6 +197,59 @@
         <section class="slide title" data-markdown>
             #Cascading Style Sheets
             ##The presentation layer
+        </section>
+        <section class="slide" data-markdown>
+            ##Referencing CSS
+
+            There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
+
+            ###Inline
+            Can be used in any HTML element using the `style` *attribute*.
+
+            ```
+            &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
+            ```
+
+            This technique should be avoided but it's good to know how it works in case you encounter it.
+
+            ###Internal
+            Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
+
+            ```    
+            &lt;head&gt;
+                &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;style&gt;
+                    h1 {
+                     font-size: 16px;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;I'm still writing CSS!&lt;/p&gt;
+            &lt;/body&gt;
+            ```
+
+            This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
+
+            ###External
+            Links to a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
+
+            Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet. 
+
+            Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
+
+            The `rel` attribute describes the relationship.
+            
+            ```
+            &lt;head&gt;
+                &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+            &lt;/head&gt;
+            ```
+
+            **Protip!**  Sublime Text shortcut: type "link" + tab key. Ta da!
         </section>
 
         <section class="slide" data-markdown>
@@ -357,59 +410,7 @@
             </div>
         </section>
 
-        <section class="slide" data-markdown>
-            ##Referencing CSS
-
-            There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
-
-            ###Inline
-            Can be used in any HTML element using the `style` *attribute*.
-
-            ```
-            &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
-            ```
-
-            This technique should be avoided but it's good to know how it works in case you encounter it.
-
-            ###Internal
-            Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
-
-            ```    
-            &lt;head&gt;
-                &lt;title&gt;Page Title&lt;/title&gt;
-                &lt;meta charset=&quot;utf-8&quot;&gt;
-                &lt;style&gt;
-                    h1 {
-                     font-size: 16px;
-                    }
-                &lt;/style&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;p&gt;I'm still writing CSS!&lt;/p&gt;
-            &lt;/body&gt;
-            ```
-
-            This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
-
-            ###External
-            Links to a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
-
-            Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet. 
-
-            Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
-
-            The `rel` attribute describes the relationship.
-            
-            ```
-            &lt;head&gt;
-                &lt;title&gt;Page Title&lt;/title&gt;
-                &lt;meta charset=&quot;utf-8&quot;&gt;
-                &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-            &lt;/head&gt;
-            ```
-
-            **Protip!**  Sublime Text shortcut: type "link" + tab key. Ta da!
-        </section>
+        
 
         <section class="slide" data-markdown>
             ##Exercise #2: add background colours (10mins)
@@ -1670,13 +1671,13 @@ See below for final code but only if you get stuck!
                 <span class="title-bg">CSS Fundamentals</span><br>
                 <span class="title-bg">for Beginners</span>
             </h2>
-            <h3><span>with</span> Christina Truong</h3>
+            <h3><span>with</span> Jessica Duarte</h3>
 
-            <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
+            <img class="instructor-img" src="http://en.gravatar.com/userimage/60723940/9dff28683e0ec3a4daddd81e54c4837a.jpg?size=200" alt="Jessica Duarte">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
-                <li><i class="fa fa-desktop"></i><a href="http://christinatruong.com">christinatruong.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong">@christinatruong</a></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hi@jessplease.com">hi@jessplease.com</li>
+                <li><i class="fa fa-desktop"></i><a href="http://jessplease.com">jessplease.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/jessicaduarte">@jessicaduarte</a></li>
             </ul>
 
             <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
