@@ -57,6 +57,8 @@
 /**
 	Slide numbers
  */
+
+
 #indicator {
   	position: absolute;
   	top: .05in;
@@ -349,4 +351,11 @@ iframe.csss-import.show {
 
 .presenter .slide:target > .presenter-notes {
 	display: block;
+}
+
+
+div.instructor {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
 }
