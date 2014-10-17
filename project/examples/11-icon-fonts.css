@@ -143,10 +143,24 @@ header {
   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
   text-align: center;
+  font-size: 0;
 }
-.skills .columns {
-  width: 33.33%;
-  float: left;
+
+h2, h3, h4 {
+  font-size: 20px;
+}
+.columns, .skills-circles li {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.columns {
+  width: 33%;
+}
+.skills-circles li {
+  width: 20%;
+  vertical-align: middle;
+  padding: 100px;
 }
 .skills ul {
   list-style-type: none;

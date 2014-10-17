@@ -109,6 +109,35 @@ header {
 .skills {
   background: url(../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
+  text-align: center;
+  font-size: 0;
+}
+
+h2, h3, h4 {
+  font-size: 20px;
+}
+
+.columns, .skills-circles li {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.columns {
+  width: 33%;
+  
+}
+
+.skills-circles li {
+ 
+  width: 20%;
+  vertical-align: middle;
+  padding: 100px;
+  
+}
+
+.skills-circles ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* EDUCATION

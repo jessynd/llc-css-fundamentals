@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -37,13 +37,19 @@
                 <!-- if needed -->
                 <span class="title-bg">for Beginners</span>
             </h1>
-            <h2><span>with</span> Jessica Duarte</h2>
+            <h2><span>with</span> Jessica Duarte <span>and</span> Haris Mahmood</h2>
 
             <img class="instructor-img" src="https://en.gravatar.com/userimage/60723940/9dff28683e0ec3a4daddd81e54c4837a.jpg?size=200" alt="Jessica Duarte">
             <ul>
                 <li><i class="fa fa-envelope"></i><a href="mailto:hi@jessplease.com">hi@jessplease.com</li>
                 <li><i class="fa fa-desktop"></i><a href="http://jessplease.com">jessplease.com</a></li>
                 <li><i class="fa fa-twitter"></i><a href="http://twitter.com/jessicaduarte">@jessicaduarte</a></li>
+            </ul>
+            <img src="instructor-img" src="http://meetharis.com/images/haris.jpg" alt="Haris Mahmood">
+            <ul>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@meetharis.com">hello@meetharis.com</li>
+                <li><i class="fa fa-desktop"></i><a href="http://meetharis.com">meetharis.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="https://twitter.com/harismahmood89">@harismahmood89</a></li>
             </ul>
         </div>
         <div class="presenter-notes">
@@ -1063,7 +1069,7 @@ max-width: 1000px;</textarea>
             **Extra resource**: https://developer.mozilla.org/en/docs/Web/CSS/background
         </section>
 
-        <!-- <section class="slide" data-markdown>
+        <section class="slide" data-markdown>
             ##Exercise 5: Update header background styles (10mins)
 
             Based on the previous slides, update your header's background image and styles.  There are a few images in your **Project** folder to choose from or add one of your own.
@@ -1073,8 +1079,7 @@ max-width: 1000px;</textarea>
             [http://littlevisuals.co/](http://littlevisuals.co/)  
             [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
 
-            Your page should look something like this: [Example 5](project/examples/5b-heading-bg.html)
-        </section> -->
+        </section>
         
         <section class="slide title" data-markdown>
             #Inline & Block
@@ -1104,7 +1109,8 @@ max-width: 1000px;</textarea>
 
             * best of both worlds
             * floats left and is the size & height of its content, like inline elements
-            * accepts height and width values like block elements
+            * accepts height and width values like block elements 
+
 
             **Extra Resource**: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
         </section>
@@ -1131,36 +1137,7 @@ max-width: 1000px;</textarea>
 
             Let's go back to our previous example and try using the `display` property.
         </section>
-
-        <section class="slide" data-markdown>
-            ##CSS Float Property
-
-            Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, `float` can be used. 
-
-            CSS floats can float elements left or right.
-
-            **However**, we have to break the *natural stacking flow* when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
-
-            **Also**, if no width set, the element will float but the width will automatically be the width of its content.
-        </section>
-        <section class="slide centered">
-            <img src="framework/img/workshop/shittier.gif">
-            <h2 class="delayed">Just kidding! We can fix it.</h2>
-        </section>
-
-        <section class="slide">
-            <h2>Float, Clear and Clearfix</h2>
-            <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
-
-            <iframe width="100%" height="360" src="http://jsfiddle.net/ttt5ebhr/3/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            
-            <p>Let's add this clearfix snippet to our CSS file to use it later.</p>
-            <p>Want to know more about the clearfix trick and clearing floats? Here you go:<br>
-            <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
-            <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
-            </p>
-        </section>
-
+       
         <section class="slide" data-markdown>
             ##Descendant selectors
             
@@ -1184,79 +1161,50 @@ max-width: 1000px;</textarea>
 
             Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
         </section>
-    
+         <section class="slide" data-markdown>
+            ##Class Exercise - Layouts with Inline-Block
+
+            So how can we use our new knowledge of `display: inline-block` to make the elements of each of our sections sit as they should? 
+
+
+            Let's take our profile section as an example. We have a profile image and a div with the class of `summary`. 
+
+            Our image is conveniently `display:inline-block` by default. But our div with the class of summary is a block element that refuses to sit next to the image because it wants to take up the whole width of the page.
+
+            To make it sit next to the image, we need to make it `display:inline` or better yet, `display:inline-block`. So let's go ahead and do that. Select the summary div and make it display inline-block.
+
+            Hopefully nothing has happened because our div is still 100% width by default. To make it sit next to the image it needs to be adjusted to be skinny enough so that both the image and the div will take up 100% of the width of the page together. 
+
+            So let's make the image 30% and the summary 70%. 
+
+            Once again, you might have noticed that nothing happened. That's because while you might think that there should be exactly enough space for an image that is 30% wide to sit next to a div 70% wide, there is another problem. Elements that are inline-block are given an invisible amount of margin as if they were text elements. To remove them we can give their parent element (in this case `section.profile`) a font-size of 0 to remove that invisible margin. Then we can override the font-size back to 16px in the summary div. 
+
+            Try it! Your section should like it does in [this](project/examples/7b-inline-block.html) example.
+
+        </section>
         <section class="slide" data-markdown>
-##Class Exercise: Floats
+            ##Exercise #6 - Layouts with inline-block (20 mins)
 
-1. Add a float to your profile image so the text can wrap around it. What happens to the parent element when a child element is floated?
-        
-    ```
-    .profile img {
-        float: left;
-    }
-    ```
+            Let's try to make all of our sections look like the [example](7b-inline-block.html) by using our descendant selectors and `display:inline-block`. 
 
-1. Add the `clearfix` class to the parent element.
+            Here's an additional trick when working with inline-block elements. When you want to center them, treat them like text. Use `text-align: center` on their parent. 
+            
 
-1. Make the image a relative size and add margin to create space between the image and text.
 
-    ```
-    .profile img {
-        float: left;
-        width: 27%;
-        margin-right: 3%;
-    }
-    ```
+        </section>      
 
-1. If the text is longer than the image, it will wrap around it. Put a width on the profile summary and float it too. (If you want the text to wrap around the profile image, skip this step.)
-    ```
-    .summary {
-        width: 70%;
-        float: right;
-    }
-    ```
+        <section class="slide" data-markdown>
+            ##CSS Float Property
+
+            Another way to make block elements sit next to each other the same way they do when they are `inline-block` is using the `float` property.
+
+            CSS floats can float elements left or right.
+            
+            Learn more about floats [here](framework/extras-floats.html) and see if you can achieve the same layout we did with `inline-block` using `float`. 
+         
+ 
         </section>
         
-        <section class="slide" data-markdown>
-            ##Exercise #7: Add More Floats and borders (20mins)
-
-            Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
-
-            In the HTML, the `.details` element contains the info that should be displayed on the left and the `.description` element contains the content to be displayed on the right. Floats can be applied to achieve this. Remember, when floating elements, declare a width as well.
-            
-            What happens when elements are floated? The **parent element** *collapses* so make sure to *fix* that as well!
-
-            ```
-            &lt;div class=&quot;item&quot;&gt;
-                &lt;div class=&quot;details&quot;&gt;
-                    Company name, date, etc
-                &lt;/div&gt;
-                &lt;div class=&quot;description&quot;&gt;
-                    Job description
-                &lt;/div&gt;
-            &lt;/div&gt;&lt;!-- close .item --&gt;
-            ```
-            **Bonus:** If you have some extra time, follow these instructions for adding a border or tweak some font styles!
-
-            * Each Work Experience item is contain in an element with the `.item` class.  Create a new declaration block for `.item` and add the `border-bottom` property to it.  The syntax is: `border-bottom: size style color;`
-            
-            ```
-            .item {
-                border-bottom: 1px solid #ccc;
-            }
-            ```
-            **Extra Bonus:** To make sure that all the **Work Experience** items have a border *except* the last item, use a **[pseudo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:last-child)**, `:last-child`. Note the syntax below. 
-
-            ```
-            .item:last-child {
-                border-bottom: none;
-            }
-            ```
-
-            Your page should look something like this: [Example 7](project/examples/7-floats.html).
-        </section>
-
-
         <section class="slide" data-markdown>
             ##More Background Styles
 
@@ -1466,9 +1414,10 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
 
 1. Using the previous example, add a gradient effect to the **Skills** section to make the text on background image more legible.
 
-1. In the **Skills** section, there are two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list option, add floats to the `.column` class to get the **three** lists to line up side by side. We'll need to set the `width`, `float` and use the `clearfix` class.
 
 Here's what your page should look like: [example 10](project/examples/10-skills-section.html).
+
+* As a bonus, try adding border, border-radius and background to your skills section to your skills-circles so that they look like the final does. If you don't get to this yet, don't worry! We will come back to this.
 
 See below for final code but only if you get stuck!
 
@@ -1478,24 +1427,7 @@ See below for final code but only if you get stuck!
   background-size: cover;
 }
 ```  
-```
-.skills .columns {
-  width: 33.33%;
-  float: left;
-}
-```
-```xml
-&lt;div class=&quot;skills-list clearfix&quot;&gt;
-    &lt;h3&gt;List Option&lt;/h3&gt;
-    &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
-        &lt;h4&gt;Best at:&lt;/h4&gt;
-        &lt;ul&gt;
-            ...
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    ...
-&lt;/div&gt;
-```
+
         </section>
 
         <section class="slide" data-markdown>
@@ -1601,7 +1533,6 @@ See below for final code but only if you get stuck!
 
             For this exercise, add the check marks (or whichever icon you'd like to use) to each list item and use the CSS `color` property to change the color of *only* the icons.  
 
-            **Bonus:** Try center aligning the headings and lists like in the [final project](project/final.html).
 
             **Extra Bonus:** Try changing the color or the `h4` subheadings.
 
@@ -1671,13 +1602,19 @@ See below for final code but only if you get stuck!
                 <span class="title-bg">CSS Fundamentals</span><br>
                 <span class="title-bg">for Beginners</span>
             </h2>
-            <h3><span>with</span> Jessica Duarte</h3>
+            <h3><span>with</span> Jessica Duarte <span>and</span> Haris Mahmood</h3>
 
             <img class="instructor-img" src="http://en.gravatar.com/userimage/60723940/9dff28683e0ec3a4daddd81e54c4837a.jpg?size=200" alt="Jessica Duarte">
             <ul>
                 <li><i class="fa fa-envelope"></i><a href="mailto:hi@jessplease.com">hi@jessplease.com</li>
                 <li><i class="fa fa-desktop"></i><a href="http://jessplease.com">jessplease.com</a></li>
                 <li><i class="fa fa-twitter"></i><a href="http://twitter.com/jessicaduarte">@jessicaduarte</a></li>
+            </ul>
+            <img src="instructor-img" src="http://meetharis.com/images/haris.jpg" alt="Haris Mahmood">
+            <ul>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@meetharis.com">hello@meetharis.com</li>
+                <li><i class="fa fa-desktop"></i><a href="http://meetharis.com">meetharis.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="https://twitter.com/harismahmood89">@harismahmood89</a></li>
             </ul>
 
             <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
