@@ -120,14 +120,12 @@ header {
   transform: rotate(4deg);
 }
 .profile .summary {
-  /*float: left;*/
   display: inline-block;
   width: 70%;
 }
 
 .profile-image {
   width: 27%;
-  /*float: left;*/
   display: inline-block;
   padding: 4px;
   margin-right: 3%;
@@ -166,7 +164,6 @@ header {
   text-transform: uppercase;
 }
 .work-experience .details {
-  /*float: left;*/
   display: inline-block;
   width: 30%;
   padding-right: 30px;
@@ -174,7 +171,6 @@ header {
 .work-experience .description {
   font-size: 14px;
   width: 70%;
-  /*float: right;*/
   display: inline-block;
 }
 .details, .description {
@@ -217,7 +213,6 @@ header {
 
 .skills-list .columns {
   width: 33.33%;
-  /*float: left;*/
   display: inline-block;
   font-size: 20px;
   vertical-align: top;
